@@ -8,30 +8,42 @@ use App\Models\DestinationFoto;
 use App\Models\SpecialOffer;
 use App\Models\Transportation;
 use Illuminate\Http\Request;
+use Symfony\Component\Mailer\Transport;
 
 class UserController extends Controller
 {
-    public function Transportation() {
+    public function Transportation()
+    {
         $data = Transportation::all();
         return view('user.transportation', compact('data'));
     }
-    public function Detail_Transportation(string $id) {
+    public function Detail_Transportation(string $id)
+    {
         $data = Transportation::find($id);
         return view('user.detail-transportation', compact('data'));
     }
- 
-    public function Detail_Destination(string $id) {
+
+    public function Detail_Destination(string $id)
+    {
         $data = Destination::findOrFail($id);
         return view('user.detail-destination', compact('data'));
     }
-    public function Destination() {
+    public function Destination()
+    {
         $data = City::with('items')->get();
-       
+
         return view('user.destination', compact('data'));
     }
-    public function Special() {
+    public function Special()
+    {
         $data = SpecialOffer::all();
-       
+
         return view('user.special', compact('data'));
+    }
+    public function Booking()
+    {
+        $data = Destination::all();
+        $dataTransport = Transportation::all();
+        return view('user.booking', compact('data','dataTransport'));
     }
 }

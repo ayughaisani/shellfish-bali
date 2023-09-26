@@ -20,6 +20,10 @@ return new class extends Migration
             $table->string('phone');
             $table->string('participant');
             $table->text('message');
+            $table->unsignedBigInteger('destination_id');
+            $table->foreign('destination_id')->references('id')->on('destination')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('transportation_id');
+            $table->foreign('transportation_id')->references('id')->on('transportation')->onDelete('cascade')->onUpdate('cascade');
             $table->date('start');
             $table->date('end');
             $table->timestamps();
