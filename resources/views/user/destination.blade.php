@@ -43,27 +43,30 @@
                 <div id="carouselUbudControls" class="carousel" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         @foreach ($row->items as $item)
-                        <div class="carousel-item ">
-                            <div class="card">
-                                <div class="img-wrapper"><img src="{{ asset('storage/'.$item->thumbnails) }}" class="d-block w-100"
-                                        alt="Cretya"> </div>
-                                <div class="card-body">
-                                    <h5 class="card-title mb-5">{{$item->destination_name}}</h5>
-                                    <p>{{Str::words($item->details_descript,6)}}</p>
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <a href="{{route('detail_destination',$item->id)}}" class="btn btn-primary btn-orange">Detail</a>
-                                        </div>
-                                        <div class="col-8 text-end">
-                                            <span>Start From</span>
-                                            <h3>${{$item->price}}<small class="per">/person</small></h3>
+                            <a href="{{ route('detail_destination', $item->id) }}" style="text-decoration: none; color:inherit">
+                                <div class="carousel-item ">
+                                    <div class="card">
+                                        <div class="img-wrapper"><img src="{{ asset('storage/' . $item->thumbnails) }}"
+                                                class="d-block w-100" alt="Cretya"> </div>
+                                        <div class="card-body" >
+                                            <h5 class="card-title mb-5" >{{ $item->destination_name }}</h5>
+                                            <p>{{ Str::words($item->details_descript, 6) }}</p>
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <a href="{{ url('/booking') }}"
+                                                        class="btn btn-primary btn-orange">Booking</a>
+                                                </div>
+                                                <div class="col-8 text-end">
+                                                    <span>Start From</span>
+                                                    <h3>${{ $item->price }}<small class="per">/person</small></h3>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </a>
                         @endforeach
-                        
+
 
 
 

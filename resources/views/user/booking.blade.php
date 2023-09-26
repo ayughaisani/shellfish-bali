@@ -126,6 +126,24 @@
                 <span id="valid-msg" class="hide"></span>
                 <span id="error-msg" class="hide"></span>
             </div>
+            <div class="mb-3">
+                <label for="mobileNumber" class="form-label">Destination</label>
+                <select class="form-select form-control" name="city_id" aria-label="Default select example">
+                    <option value="">Select City</option>
+                    @foreach ($data as $item)
+                        <option value="{{ $item->id }}">{{ $item->destination_name }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="mobileNumber" class="form-label">Transportation</label>
+                <select class="form-select form-control" name="city_id" aria-label="Default select example">
+                    <option value="">Select City</option>
+                    @foreach ($dataTransport as $item)
+                        <option value="{{ $item->id }}">{{ $item->name_transportation }}</option>
+                    @endforeach
+                </select>
+            </div>
             <div class="mb-3 d-grid gap-2">
                 <button type="submit" class="btn btn-orange text-white">Booking</button>
             </div>

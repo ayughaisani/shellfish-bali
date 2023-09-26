@@ -36,12 +36,7 @@ Route::get('/transportation', [UserController::class, 'Transportation']);
 Route::get('/detail-transportation/{id}', [UserController::class, 'Detail_Transportation'])->name('detail_transport');
 Route::get('/detail-destination/{id}', [UserController::class, 'Detail_Destination'])->name('detail_destination');
 Route::get('/special', [UserController::class, 'Special'])->name('special_offer');
-
-
-
-Route::get('/booking', function () {
-    return view('user.booking');
-});
+Route::get('/booking', [UserController::class,'Booking'])->name('booking');
 
 
 Route::post('/store/booking', [BookingController::class, 'store'])->name('store.booking');
