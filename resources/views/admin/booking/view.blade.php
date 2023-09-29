@@ -3,16 +3,16 @@
     <div class="container-fluid">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Booking</h1>
+        <h1 class="mb-2 text-gray-800 h3">Booking</h1>
 
         <!-- DataTales Example -->
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
+        <div class="mb-4 shadow card">
+            <div class="py-3 card-header">
                 <div class="row align-items-center">
                     <div class="col">
                         <h6 class="m-0 font-weight-bold text-primary">DataTable Booking</h6>
                     </div>
-                   
+
                 </div>
 
             </div>
@@ -25,6 +25,8 @@
                                 <th>Firstname</th>
                                 <th>Email</th>
                                 <th>Phone</th>
+                                <th>Destination</th>
+                                <th>Transportation</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -33,13 +35,17 @@
                             @foreach ($data as $item => $row)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{$row->firstname}}</td>
-                                    <td>{{$row->email}}</td>
-                                    <td>{{$row->phone}}</td>
+                                    <td>{{ $row->firstname }}</td>
+                                    <td>{{ $row->email }}</td>
+                                    <td>{{ $row->phone }}</td>
+                                    <td>{{ $row->destination }}</td>
+                                    <td>{{ $row->transportation }}</td>
                                     <td>
-                                        <a href="{{ route('booking-detail',$row->id) }}" id="...." ><button type="button"
-                                                class="btn btn-warning"><i class="bi bi-pencil-square"></i>Detail</button></a>
-                                        <a href="{{route('booking-delete', $row->id)}}" id="delete" data-confirm-delete="true" ><button type="button"
+                                        <a href="{{ route('booking-detail', $row->id) }}" id="...."><button
+                                                type="button" class="btn btn-warning"><i
+                                                    class="bi bi-pencil-square"></i>Detail</button></a>
+                                        <a href="{{ route('booking-delete', $row->id) }}" id="delete"
+                                            data-confirm-delete="true"><button type="button"
                                                 class="btn btn-danger delete"><i class="bi bi-trash"></i>Delete</button></a>
                                     </td>
                                 </tr>
@@ -52,4 +58,3 @@
 
     </div>
 @endsection
-

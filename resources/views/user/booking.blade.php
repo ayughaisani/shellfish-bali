@@ -43,7 +43,7 @@
                                 <a class="nav-link" href="{{ url('/transportation') }}">Transportation</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link badge text-bg-orange m-2 p-2" href="{{ url('/booking') }}">Book</a>
+                                <a class="p-2 m-2 nav-link badge text-bg-orange" href="{{ url('/booking') }}">Book</a>
                             </li>
                             <!-- Language -->
                             <!-- <div class="nav-item dropdown">
@@ -67,30 +67,32 @@
     </header>
 
     <div class="m-4"></div>
-    <div class="container contet bg-white rounded-2 booking">
-        <div class="text-center p-4 text-orange ">
+    <div class="container bg-white contet rounded-2 booking">
+        <div class="p-4 text-center text-orange ">
             <h3 class="fw-bolder">Booking</h3>
         </div>
         <form id="validate" action="{{ route('store.booking') }}" method="POST">
             @csrf
             <div class="row">
-                    <div class="mb-3 col-md-6">
-                        <label for="firstName" class="form-label">First Name</label>
-                        <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name">
-                    </div>
-                    <div class="mb-3 col-md-6">
-                        <label for="lastName" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" name="lastname" id="lastName" placeholder="Last Name">
-                    </div>
+                <div class="mb-3 col-md-6">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name">
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" name="lastname" id="lastName" placeholder="Last Name">
+                </div>
                 <div class="col-md">
                     <div class="row">
                         <div class="mb-3 col-md-6">
                             <label for="Date" class="form-label">Start Date</label>
-                            <input type="date" class="form-control" name="start" id="start" placeholder="Start">
+                            <input type="date" class="form-control" name="start" id="start"
+                                placeholder="Start">
                         </div>
                         <div class="mb-3 col-md-6">
                             <label for="Date" class="form-label">End Date</label>
-                            <input type="date" class="form-control" name="end" id="end" placeholder="Start">
+                            <input type="date" class="form-control" name="end" id="end"
+                                placeholder="Start">
                         </div>
                     </div>
                 </div>
@@ -116,19 +118,20 @@
                 </div>
                 <div class="mb-3 col-md-6">
                     <label for="message" class="form-label">Your Message</label>
-                    <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="5">Write Your Message</textarea>
+                    <textarea class="form-control" name="message" id="message" rows="5">Write Your Message</textarea>
                 </div>
             </div>
 
             <div class="mb-3">
                 <label for="mobileNumber" class="form-label">Mobile Number</label>
-                <input type="tel"  class="form-control" name="phone" id="mobileNumber">
+                <input type="tel" class="form-control" name="phone" id="mobileNumber">
                 <span id="valid-msg" class="hide"></span>
                 <span id="error-msg" class="hide"></span>
             </div>
             <div class="mb-3">
-                <label for="mobileNumber" class="form-label">Destination</label>
-                <select class="form-select form-control" name="city_id" aria-label="Default select example">
+                <label for="destination" class="form-label">Destination</label>
+                <select class="form-select form-control" name="city_id" id="destination"
+                    aria-label="Default select example">
                     <option value="">Select City</option>
                     @foreach ($data as $item)
                         <option value="{{ $item->id }}">{{ $item->destination_name }}</option>
@@ -136,23 +139,24 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="mobileNumber" class="form-label">Transportation</label>
-                <select class="form-select form-control" name="city_id" aria-label="Default select example">
+                <label for="transportation" class="form-label">Transportation</label>
+                <select class="form-select form-control" name="city_id" id="transportation"
+                    aria-label="Default select example">
                     <option value="">Select City</option>
                     @foreach ($dataTransport as $item)
                         <option value="{{ $item->id }}">{{ $item->name_transportation }}</option>
                     @endforeach
                 </select>
             </div>
-            <div class="mb-3 d-grid gap-2">
-                <button type="submit" class="btn btn-orange text-white">Booking</button>
+            <div class="gap-2 mb-3 d-grid">
+                <button type="submit" class="text-white btn btn-orange">Booking</button>
             </div>
         </form>
     </div>
 
 
-    <footer class="footer-transport fixed-bottom p-2 bg-dark text-center">
-        <div class="container-fluid text-white">
+    <footer class="p-2 text-center footer-transport fixed-bottom bg-dark">
+        <div class="text-white container-fluid">
             <ul>
                 <li><i class="bi bi-telephone"></i><a href="https://www.instagram.com/shellfish.balitour/"
                         target="_blank"> +62 821-2929-3099</a></li>
@@ -224,7 +228,7 @@
         input.addEventListener('keyup', reset);
 
         function updatePlaceholder(selectedCountry) {
- 
+
             input.value = '+' + iti.getSelectedCountryData().dialCode;
         }
         updatePlaceholder();
@@ -254,9 +258,20 @@
                 },
                 phone: {
                     required: true,
-
                 },
                 country: {
+                    required: true,
+                },
+                participant: {
+                    required: true,
+                },
+                destination: {
+                    required: true,
+                },
+                transportation: {
+                    required: true,
+                },
+                messsage: {
                     required: true,
                 },
             },
@@ -274,7 +289,7 @@
                     required: "foto event harus ditambahkan",
                 },
                 berita: {
-                    required: "verita tidak boleh kosong",
+                    required: "berita tidak boleh kosong",
                 },
             },
         });
