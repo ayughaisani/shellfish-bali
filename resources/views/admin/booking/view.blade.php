@@ -38,8 +38,8 @@
                                     <td>{{ $row->firstname }}</td>
                                     <td>{{ $row->email }}</td>
                                     <td>{{ $row->phone }}</td>
-                                    <td>{{ $row->destination }}</td>
-                                    <td>{{ $row->transportation }}</td>
+                                    <td>{{ $row->destination_id }}</td>
+                                    <td>{{ $row->transportation_id }}</td>
                                     <td>
                                         <a href="{{ route('booking-detail', $row->id) }}" id="...."><button
                                                 type="button" class="btn btn-warning"><i

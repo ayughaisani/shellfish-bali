@@ -39,6 +39,8 @@ class BookingController extends Controller
         $data->email        = $request->email;
         $data->phone        = $request->phone;
         $data->message        = $request->message;
+        $data->destination_id        = $request->destination_id;
+        $data->transportation_id        = $request->transportation_id;
         $data->save();
         return view('user/alert');
     }

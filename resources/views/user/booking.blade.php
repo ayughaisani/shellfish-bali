@@ -130,7 +130,7 @@
             </div>
             <div class="mb-3">
                 <label for="destination" class="form-label">Destination</label>
-                <select class="form-select form-control" name="city_id" id="destination"
+                <select class="form-select form-control" name="destination_id" id="destination"
                     aria-label="Default select example">
                     <option value="">Select City</option>
                     @foreach ($data as $item)
@@ -140,7 +140,7 @@
             </div>
             <div class="mb-3">
                 <label for="transportation" class="form-label">Transportation</label>
-                <select class="form-select form-control" name="city_id" id="transportation"
+                <select class="form-select form-control" name="transportation_id" id="transportation"
                     aria-label="Default select example">
                     <option value="">Select City</option>
                     @foreach ($dataTransport as $item)
