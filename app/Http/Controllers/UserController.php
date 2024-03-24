@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\City;
 use App\Models\Destination;
+use App\Models\Wisata;
+use App\Models\Dashboard2;
 use App\Models\DestinationFoto;
 use App\Models\SpecialOffer;
 use App\Models\Transportation;
@@ -25,25 +27,28 @@ class UserController extends Controller
 
     public function Detail_Destination(string $id)
     {
-        $data = Destination::findOrFail($id);
+        $data = Destination::find($id);
         return view('user.detail-destination', compact('data'));
     }
     public function Destination()
     {
-        $data = City::with('items')->get();
-
+        $data = Destination::all();
         return view('user.destination', compact('data'));
     }
     public function Special()
     {
         $data = SpecialOffer::all();
-
+        
         return view('user.special', compact('data'));
     }
-    public function Booking()
+    public function wisatabali()
     {
-        $data = Destination::all();
-        $dataTransport = Transportation::all();
-        return view('user.booking', compact('data','dataTransport'));
+        $data = Wisata::where('jenis',1)->get();
+        return view('user.booking', compact('data'));
+    }
+    public function wisatabanyuwangi()
+    {
+        $data = Wisata::where('jenis',2)->get();
+        return view('user.banyuwangi', compact('data'));
     }
 }

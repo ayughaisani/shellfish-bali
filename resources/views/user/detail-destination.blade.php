@@ -34,24 +34,19 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/destination') }}">Destinations</a>
                         </li>
-                        <li class="nav-item">
+                       <!-- <li class="nav-item">
                             <a class="nav-link" href="{{ url('/special') }}">Special Offers</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/transportation') }}">Transportation</a>
+                        </li>-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/wisatabali') }}">Wisatabali</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link badge text-bg-orange m-2 p-2" href="{{ url('/booking') }}">Book</a>
+                        <a class="nav-link" href="{{ url('/wisatabanyuwangi') }}">Wisatabanyuwangi</a>
                         </li>
-                        <!-- Language -->
-                        <!-- <div class="nav-item dropdown">
-                    <select class="nav-link dropdown-toggle" id="">
-                        <div class="dropdown-menu">
-                        <option value="en" class="dropdown-item" style="background: #00000050 0.1; color: black;">EN</option>
-                        <option value="id" class="dropdown-item" style="background: #00000050 0.1; color: black;">ID</option>
-                        </div>
-                    </select>
-                    </div>  -->
+                    
                     </ul>
                 </div>
             </div>

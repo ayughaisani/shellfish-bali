@@ -36,10 +36,12 @@ Route::get('/transportation', [UserController::class, 'Transportation']);
 Route::get('/detail-transportation/{id}', [UserController::class, 'Detail_Transportation'])->name('detail_transport');
 Route::get('/detail-destination/{id}', [UserController::class, 'Detail_Destination'])->name('detail_destination');
 Route::get('/special', [UserController::class, 'Special'])->name('special_offer');
-Route::get('/booking', [UserController::class,'Booking'])->name('booking');
+Route::get('/wisatabali', [UserController::class,'Wisatabali'])->name('Wisatabali');
+Route::get('/wisatabanyuwangi', [UserController::class,'Wisatabanyuwangi'])->name('Wisatabali');
 
 
 Route::post('/store/booking', [BookingController::class, 'store'])->name('store.booking');
+
 
 // Admin
 Route::middleware([

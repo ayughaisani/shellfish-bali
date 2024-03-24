@@ -35,18 +35,18 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/destination') }}">Destinations</a>
-                           <!-- </li>
-                            <li class="nav-item">
+                           </li>
+                            <!--<li class="nav-item">
                                 <a class="nav-link" href="specialOffers.html">Special Offers</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/transportation') }}">Transportation</a>
                             </li>-->
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/wisatabali') }}">wisatabali</a>
+                                <a class="nav-link" href="{{ url('/wisatabali') }}">Wisatabali</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/wisatabanyuwangi') }}">wisatabanyuwangi</a>
+                                <a class="nav-link" href="{{ url('/wisatabanyuwangi') }}">Wisatabanyuwangi</a>
                             </li>
                             <!-- Language -->
                             <!-- <div class="nav-item dropdown">

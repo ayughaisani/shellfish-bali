@@ -33,16 +33,21 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{ url('/destination') }}">Destinations</a>
               </li>
-              <li class="nav-item">
+              <!--<li class="nav-item">
                 <a class="nav-link" href="{{ url('/special') }}">Special Offers</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ url('/transportation') }}">Transportation</a>
+              </li>-->
+              <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/wisatabali') }}">Wisatabali</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link badge text-bg-orange m-2 p-2"
-                  href="{{url('/booking')}}">Book</a>
+                <a class="nav-link"
+                  href="{{url('/wisatabanyuwangi')}}">Wisatabanyuwangi</a>
               </li>
+        
+          
               <!-- Language -->
               <!-- <div class="nav-item dropdown">
                       <select class="nav-link dropdown-toggle" id="">
@@ -69,8 +74,7 @@
               bring you to enjoy and explore the fun, adventurous activities, the breathtaking natural view and the
               magnificent art, culture, places. </p>
             <p>We also provide drone videography service in Bali. We help our customer to save beautiful holiday moments
-              through videos. Perfect gateaway is yours.
-            </p>
+              through videos. Perfect gateaway is yours.</p>
             <span class="open p-1">Open Daily: 8AM - 9PM</span><br>
           </div>
         </div>

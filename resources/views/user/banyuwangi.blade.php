@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>ShellFish | Bali</title>
+    <title>ShellFish | banyuwangi</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,7 +18,7 @@
 
 <body class="banner-image-booking">
     <header class="">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark p-md-3">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark p-md-3">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
@@ -95,9 +95,9 @@ h1 { text-align: center;}
 </style>
 </head>
 <body>
-<<h1 style="color:white;">Bali tourist list</h1>
+<<h1 style="color:white;">Banyuwangi Tourist list</h1>
 <table style="width:100%">
-
+</body>
 <style>
 body {
   color: white;
@@ -107,7 +107,7 @@ th {
   color: white;
 }
 </style>
-<tr>
+  <tr>
     <th>No</th>
     <th>Wisata</th> 
     <th>Alamat</th>
@@ -142,7 +142,7 @@ $i=1;
     </footer>
     </div>
     <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -154,7 +154,7 @@ $i=1;
     <script src="{{ asset('user/js/bootstrap.min.js') }}" crossorigin="anonymous"></script>
 
     {{-- <script src="{{ asset('user/js/jquery.easing.min.js') }}"></script> <!-- jQuery Easing for smooth scrolling between anchors --> --}}
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
         const input = document.querySelector("#mobileNumber");
         const errorMsg = document.querySelector("#error-msg");
         const validMsg = document.querySelector("#valid-msg");
