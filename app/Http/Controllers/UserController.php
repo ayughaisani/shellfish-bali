@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\City;
 use App\Models\Destination;
 use App\Models\Wisata;
-use App\Models\Dashboard2;
+use App\Models\Dashboard;
 use App\Models\DestinationFoto;
 use App\Models\SpecialOffer;
 use App\Models\Transportation;
@@ -30,25 +30,38 @@ class UserController extends Controller
         $data = Destination::find($id);
         return view('user.detail-destination', compact('data'));
     }
+    public function Home()
+    {
+        $data = Dashboard::where('jenis',1)->first();
+        // $data=$data->
+        return view('user.home', compact('data'));
+    }
     public function Destination()
     {
-        $data = Destination::all();
+        $data = Dashboard::where('jenis',2)->first();
+        // $data=$data->
         return view('user.destination', compact('data'));
     }
     public function Special()
     {
-        $data = SpecialOffer::all();
+        $data =SpecialOffer::leftJoin('city', 'city.id', '=', 'specialoffers.city_id')
+        ->get(); 
         
         return view('user.special', compact('data'));
     }
     public function wisatabali()
     {
-        $data = Wisata::where('jenis',1)->get();
+        $data = Wisata::where('city_id',1)->get();
         return view('user.booking', compact('data'));
     }
     public function wisatabanyuwangi()
     {
-        $data = Wisata::where('jenis',2)->get();
+        $data = Wisata::where('city_id',2)->get();
         return view('user.banyuwangi', compact('data'));
+    }
+    public function specialoffers()
+    {
+        $data = Wisata::where('city_id',1,2)->get();
+        return view('user.special', compact('data'));
     }
 }

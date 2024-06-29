@@ -36,12 +36,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/destination') }}">Destinations</a>
                             </li>
-                            <!--<li class="nav-item">
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/special') }}">Special Offers</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/transportation') }}">Transportation</a>
-                            </li>-->
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/wisatabali') }}">Wisatabali</a>
                             </li>
@@ -85,12 +85,21 @@
     <div class="table-responsive">          
     <table class="table">
     <style>
+    table {
+  border-collapse;
+  width: 100%;
+}
     table, th, td {
   border: 5px solid white;
   border-collapse: collapse;
 }
 </style>
+<head>
 <style>
+body {
+    h1{font-family: Georgia, sans-serif;
+    font-size: 16x;
+}}
 h1 { text-align: center;}
 </style>
 </head>
@@ -103,15 +112,19 @@ body {
   color: white;
 }
 th {
-  background-color: orange;
-  color: white;
+  background-color;
+  color: orange;
+}
+
+tr:nth-child(even) {
+  background-color: #6B8E23;
 }
 </style>
 <tr>
     <th>No</th>
     <th>Wisata</th> 
     <th>Alamat</th>
-    <th>Biaya</th>
+    <th>Harga</th>
   </tr>
 <?php
 $i=1;
@@ -119,9 +132,9 @@ $i=1;
   @foreach($data as $a)
   <tr>
     <td>{{$i++}}</td>
-    <td>{{$a->wisata}}</td> 
-    <td>{{$a->alamat}}</td>
-    <td>{{$a->biaya}}</td>
+    <td>{{$a->destination_name}}</td> 
+    <td>{{$a->details_descript}}</td>   
+    <td>{{$a->price}}</td>
   </tr>
   @endforeach
 </table>
@@ -170,7 +183,7 @@ $i=1;
             errorMsg.innerHTML = "";
             errorMsg.classList.add("hide");
             validMsg.classList.add("hide");
-        };
+        };  
 
         // on blur: validate
         input.addEventListener('blur', () => {

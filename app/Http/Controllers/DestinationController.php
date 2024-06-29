@@ -44,27 +44,30 @@ class DestinationController extends Controller
     public function store(Request $request)
     {
         $data = new Destination();
-        $data->id = $request->kd;
-        $data->city_id = $request->city_id;
-        $data->destination_name = $request->destination_name;
-        $data->price = $request->price;
+        // $data->id = $request->kd;
 
-        $data->details_descript = $request->details_descript;
+        $data->alamat = $request->alamat;
         if ($request->hasFile('thumbnails')) {
             $thumbnails=$request->file('thumbnails')->store('thumbnails');
             $data->thumbnails = $thumbnails;
         }
+        $data->id = $request->id;
+        $data->city_id = $request->city_id;
+        $data->destination_name = $request->destination_name;
+        $data->price = $request->price;
+        
+
         $data->save();
 
-        foreach ($request->foto_detail as $key => $foto_detail) {
-            $admin = new DestinationFoto();
-            if ($admin->foto_detail = $foto_detail) {
-                $newbaru= $foto_detail->store('foto_details');
-            }
-            $admin['foto_detail'] = $newbaru;
-            $admin->id_destination = $request->kd;
-            $admin->save();
-        }
+        // foreach ($request->foto_detail as $key => $foto_detail) {
+        //     $admin = new DestinationFoto();
+        //     if ($admin->foto_detail = $foto_detail) {
+        //         $newbaru= $foto_detail->store('foto_details');
+        //     }
+        //     $admin['foto_detail'] = $newbaru;
+        //     $admin->id_destination = $request->kd;
+        //     $admin->save();
+        // }
         return redirect()->route('view-destination');
     }
 
@@ -107,24 +110,24 @@ class DestinationController extends Controller
         $data->destination_name = $request->destination_name;
         $data->price = $request->price;
         
-        $data->details_descript = $request->details_descript;
+        $data->alamat = $request->alamat;
         if ($request->hasFile('thumbnails')) {
             $thumbnails=$request->file('thumbnails')->store('thumbnails');
             $data->thumbnails = $thumbnails;
         }
         $data->update();
 
-        if($request->hasFile("foto_detail")){
-            foreach ($request->foto_detail as $key => $foto_detail) {
-                $admin = new DestinationFoto();
-                if ($admin->foto_detail = $foto_detail) {
-                    $newbaru= $foto_detail->store('foto_details');
-                }
-                $admin['foto_detail'] = $newbaru;
-                $admin->id_destination = $request->kd;
-                $admin->save();
-            }
-        }
+        // if($request->hasFile("foto_detail")){
+        //     foreach ($request->foto_detail as $key => $foto_detail) {
+        //         $admin = new DestinationFoto();
+        //         if ($admin->foto_detail = $foto_detail) {
+        //             $newbaru= $foto_detail->store('foto_details');
+        //         }
+        //         $admin['foto_detail'] = $newbaru;
+        //         $admin->id_destination = $request->kd;
+        //         $admin->save();
+        //     }
+        // }
         
         return redirect()->route('view-destination');
     }

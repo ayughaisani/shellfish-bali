@@ -34,12 +34,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/destination') }}">Destinations</a>
                         </li>
-                       <!-- <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ url('/special') }}">Special Offers</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/transportation') }}">Transportation</a>
-                        </li>-->
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/wisatabali') }}">Wisatabali</a>
                         </li>

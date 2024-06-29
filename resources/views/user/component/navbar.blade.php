@@ -10,25 +10,25 @@
           <div class="ms-auto">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" href="{{ url('/') }}" aria-current="page">Home <span
+                <a class="nav-link active" href="{{ url('/') }}" aria-current="page">Home<span
                     class="visually-hidden">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ url('/destination') }}">Destinations</a>
               </li>
-              <!--<li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="{{ url('/special') }}">Special Offers</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ url('/transportation') }}">Transportation</a>
-              </li>-->
-              <li class="nav-item">
-                <a class="nav-link"
-                  href="{{ url('/wisatabali') }}">wisatabali</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link"
-                  href="{{ url('/wisatabanyuwangi') }}">wisatabanyuwangi</a>
+                  href="{{ url('/wisatabali') }}">Wisatabali</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"
+                  href="{{ url('/wisatabanyuwangi') }}">Wisatabanyuwangi</a>
               </li>
               <!-- Language -->
               <!-- <div class="nav-item dropdown">

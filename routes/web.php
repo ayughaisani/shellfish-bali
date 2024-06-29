@@ -23,9 +23,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('user.home');
-});
+Route::get('/', [UserController::class, 'Home']);
 
 Route::get('/destination', [UserController::class, 'Destination']);
 Route::get('/detail-destination', function () {

@@ -12,24 +12,29 @@
                 <table class="table table-striped table-bordered">
                     <thead>
                           <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Thumbnail</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
+                            <th scope="col">Id</th>
+                            <th scope="col">City_id</th>
+                            <th scope="col">Destination_name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Alamat</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
                           @foreach ($data as $item =>$row)
                           <tr>
                             <th scope="row">{{ $loop->iteration }}</th>
-                            <td><img src="{{asset('storage/'.$row->thumbnails)}}" width="70px" alt=""></td>
-                            <td>{{ $row->destination_name }}</td>
-                            <td>{{Str::words($row->details_descript,6)}}</td>
+                            <td>{{ $row->city_id}}</td>
+                            <td>{{ $row->destination_name}}</td>
+                            <td>{{ $row->price}}</td>
+                            
+                            
+                            <td>{{Str::words($row->alamat)}}</td>
                             <td>
-                                <a href="{{ route('edit-destination',$row->id) }}"><button type="button" class="btn btn-warning"><i class="bi bi-pencil-square"></i>Edit</button></a>
+                               <!-- <a href="{{ route('edit-destination',$row->id) }}"><button type="button" class="btn btn-warning"><i class="bi bi-pencil-square"></i>Edit</button></a>
                                 <a id="delete" href="{{route('destroy-destination',$row->id)}}"  class="btn btn-danger"><i class="bi bi-trash"></i>Delete</a>
-                            </td>
+                            </td>-->
                           </tr>
                           @endforeach
                           

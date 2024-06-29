@@ -33,7 +33,7 @@
             <div class="card-body">
                 <table class="table table-striped table-bordered">
                     <thead>
-                        <tr>
+                    <tr>
                             <th scope="col">No</th>
                             <th scope="col">Name</th>
                             <th scope="col">Action</th>
@@ -92,7 +92,7 @@
           required: "foto event harus ditambahkan",
         },
         berita: {
-          required: "verita tidak boleh kosong",
+          required: "berita tidak boleh kosong",
         },
       },
     });

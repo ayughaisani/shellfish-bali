@@ -3,7 +3,7 @@
     <div class="container-fluid">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Booking</h1>
+        <h1 class="h3 mb-2 text-gray-800">Destination</h1>
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
@@ -22,10 +22,10 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Firstname</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>Action</th>
+                                <th>City</th>
+                                <th>Destination_name</th>
+                                <th>Price</th>
+                                <th>Alamat (image)</th>
                             </tr>
                         </thead>
 
@@ -33,9 +33,9 @@
                             @foreach ($data as $item => $row)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{$row->firstname}}</td>
-                                    <td>{{$row->email}}</td>
-                                    <td>{{$row->phone}}</td>
+                                    <td>{{$row->city}}</td>
+                                    <td>{{$row->destination_name}}</td>
+                                    <td>{{$row->price}}</td>
                                     <td>
                                         <a href="{{ route('booking-detail',$row->id) }}" id="...." ><button type="button"
                                                 class="btn btn-warning"><i class="bi bi-pencil-square"></i>Detail</button></a>

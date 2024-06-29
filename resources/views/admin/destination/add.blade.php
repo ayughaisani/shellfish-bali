@@ -29,12 +29,12 @@
                     </div>
                     <div class="mb-3">
                         <label for="price" class="form-label">Price</label>
-                        <div id="price" class="form-text">exchange rate with (USD)</div>
+                        <!--<div id="price" class="form-text">exchange rate with (USD)</div>-->
                         <input type="text" name="price" class="form-control" id="price">
                     </div>
                     <div class="mb-3">
-                        <label for="detailsDescription" class="form-label">Details Description</label>
-                        <textarea class="form-control" name="details_descript" id="detailsDescription" rows="3"></textarea>
+                        <label for="detailsdescription" class="form-label">Alamat</label>
+                        <textarea class="form-control" name="alamat" id="detailsDescription" rows="3"></textarea>
                     </div>
                     <div class="mb-3">
                         <div class="input-group mb-3">
@@ -49,20 +49,20 @@
             <div class="card mt-4 mb-4">
                 <div class="card-header">
                     <div class="d-sm-flex align-items-center justify-content-between">
-                        <h1 class="h3 mb-0 text-gray-800">Add Foto</h1>
+                        <!--<h1 class="h3 mb-0 text-gray-800">Add Foto</h1>
                         <button type="button" class="btn btn-outline-primary add-more"><i class="bi bi-plus-circle"></i>
                             Add
-                        </button>
+                        </button>-->
                     </div>
                 </div>
                 <div class="card-body">
                     <div class=" mb-3">
                         <div class=" add-more-data">
                             <div class="row mb-3">
-                                <div class="col">
+                                <!--<div class="col">
                                     <input type="file" required name="foto_detail[]" id="foto_detail"
                                         accept="image/png, image/jpeg">
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
