@@ -11,17 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('wisata', function (Blueprint $table) {
+        Schema::create('__dashboard', function (Blueprint $table) {
             $table->id();
+            $table->text('isi');
+            $table->string('opendaily');
             $table->timestamps();
+            $table->integer('jenis');
+            $table->integer('id_user');
         });
     }
-
-    /**
-     * Reverse the migrations.
+    
+    /**   
+     * Reverse the migrations.   
      */
     public function down(): void
     {
-        Schema::dropIfExists('wisata');
+        Schema::dropIfExists('__dashboard');
     }
-};
+};  

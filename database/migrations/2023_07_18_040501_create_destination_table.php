@@ -13,13 +13,11 @@ return new class extends Migration
     {
         Schema::create('destination', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('city_id');
-            $table->foreign('city_id')->references('id')->on('city')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('city_id');
             $table->string('destination_name');
-            $table->float('price');
-           
-            $table->text('details_descript');
-            $table->string('thumbnails');
+            $table->integer('price');
+            $table->text('alamat');
+            $table->text('thumbnails');
             $table->timestamps();
         });
     }
