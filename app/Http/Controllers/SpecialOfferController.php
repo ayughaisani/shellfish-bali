@@ -31,10 +31,20 @@ class SpecialOfferController extends Controller
     public function store(Request $request)
     {
         $data = new SpecialOffer();
+        // $data->id = $request->kd;
+
+        $data->promo = $request->promo;
         if ($request->hasFile('picture')) {
             $picture = $request->file('picture')->store('special');
             $data->picture = $picture;
         }
+        $data->id = $request->id;
+        $data->city_id = $request->city_id;
+        $data->nama = $request->nama;
+        $data->lokasi = $request->lokasi;
+        $data->keterangan = $request->keterangan;
+        $data->harga = $request->harga;
+        
         $data->save();
         return redirect()->route('specialoffers')->withSuccess('Data successfully added');
     }

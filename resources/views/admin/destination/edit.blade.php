@@ -35,14 +35,14 @@
                     </div>
                     <div class="mb-3">
                         <label for="price" class="form-label">Price</label>
-                        <div id="price" class="form-text">exchange rate with (USD)</div>
+                        <!--<div id="price" class="form-text">exchange rate with (USD)</div>-->
                         <input type="text" value="{{ $data->price }}" name="price" class="form-control"
                             id="price">
                     </div>
                   
                     <div class="mb-3">
-                        <label for="detailsDescription" class="form-label">Details Description</label>
-                        <textarea class="form-control" name="details_descript" id="detailsDescription" rows="3">{{ $data->details_descript }}</textarea>
+                        <label for="detailsDescription" class="form-label">Alamat</label>
+                        <textarea class="form-control" name="alamat" id="detailsDescription" rows="3">{{ $data->details_descript }}</textarea>
                     </div>
                     <div class="mb-3">
                         <div class="input-group mb-3">

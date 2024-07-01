@@ -40,9 +40,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/transportation') }}">Transportation</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link badge text-bg-orange m-2 p-2" href="{{ url('/booking') }}">Book</a>
                         </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/wisatabali') }}">Wisatabali</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/wisatabanyuwangi') }}">Wisatabanyuwangi</a>
+                            </li>
+                        <!--<li class="nav-item">
+                            <a class="nav-link badge text-bg-orange m-2 p-2" href="{{ url('/booking') }}">Book</a>
+                        </li>-->
                         <!-- Language -->
                         <!-- <div class="nav-item dropdown">
                     <select class="nav-link dropdown-toggle" id="">

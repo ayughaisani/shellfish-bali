@@ -13,8 +13,13 @@ return new class extends Migration
     {
         Schema::create('specialoffer', function (Blueprint $table) {
             $table->id();
-            $table->string('picture');
+            $table->integer('city_id');
+            $table->integer('nama');
+            $table->integer('lokasi');
+            $table->integer('keterangan');
+            $table->integer('harga');
             $table->timestamps();
+            $table->string('promo');
         });
     }
 

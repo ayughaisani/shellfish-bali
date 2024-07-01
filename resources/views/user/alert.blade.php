@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>ShellFish | Book</title>
+    <title>ShellFish | Tours</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,7 +35,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/destination') }}">Destinations</a>
-                            </li>
+                           </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="specialOffers.html">Special Offers</a>
                             </li>
@@ -43,7 +43,10 @@
                                 <a class="nav-link" href="{{ url('/transportation') }}">Transportation</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link badge text-bg-orange m-2 p-2" href="{{ url('/booking') }}">Book</a>
+                                <a class="nav-link" href="{{ url('/destination') }}">Wisatabali</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/destination') }}">Wisatabanyuwangi</a>
                             </li>
                             <!-- Language -->
                             <!-- <div class="nav-item dropdown">
@@ -102,7 +105,7 @@
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
     </script>
     
-
+    
     <script src="{{ asset('user/js/bootstrap.min.js') }}" crossorigin="anonymous"></script>
 
     {{-- <script src="{{ asset('user/js/jquery.easing.min.js') }}"></script> <!-- jQuery Easing for smooth scrolling between anchors --> --}}

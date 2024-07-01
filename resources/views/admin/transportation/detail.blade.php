@@ -19,13 +19,13 @@
                     </div>
                     <div class="mb-3">
                         <label for="price" class="form-label">Price</label>
-                        <div id="price" class="form-text">exchange rate with (USD)</div>
+                        <!--<div id="price" class="form-text">exchange rate with (USD)</div>-->
                         <input type="text" name="price" value="{{ $data->price }}" class="form-control" id="price">
                     </div>
                  
                     <div class="mb-3">
-                        <label for="detailsDescription" class="form-label">Details Description</label>
-                        <textarea class="form-control" name="details_description" id="detailsDescription" rows="3">{{ $data->details_description }}</textarea>
+                        <label for="title" class="form-label">Details_description</label>
+                        <input type="text" name="details_description" value="{{ $data->details_description }}" class="form-control" id="title">
                     </div>
 
                     <div class="d-flex justify-content-center">
